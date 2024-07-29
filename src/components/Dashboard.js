@@ -57,6 +57,9 @@ const Dashboard = ({ onLogout }) => {
       const response = await api.get('/todos');
       setTodos(response.data);
       setSuccess('To-do item deleted successfully!');
+      setTimeout(() => {
+        setSuccess('');
+      }, 1000);
     } catch (error) {
       setError(error.response?.data?.error || 'An unexpected error occurred.');
     }
