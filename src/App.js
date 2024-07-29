@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import Register from './components/Register';
@@ -16,6 +16,10 @@ const App = () => {
     localStorage.removeItem('token');
     setIsLoggedIn(false);
   };
+
+  useEffect(() => {
+    setIsLoggedIn(!!localStorage.getItem('token'));
+  }, []);
 
   return (
     <Router>

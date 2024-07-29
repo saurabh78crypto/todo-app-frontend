@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Form, Button, Card, Container, Row, Col, Alert } from 'react-bootstrap';
 import api from '../api';
 import './Login.css'; 
@@ -19,13 +19,20 @@ const Login = ({ onLogin }) => {
       const response = await api.post('/login', { email, password });
       localStorage.setItem('token', response.data.token);
       setSuccess('Login successful! Redirecting...');
-      setTimeout(() => {
-        navigate('/dashboard');
-      }, 1000);
+      onLogin();
     } catch (error) {
       setError(error.response?.data?.error);
     }
   };
+
+  useEffect(() => {
+    if(success) {
+      const timer = setTimeout(() => {
+        navigate('/dashboard');
+      }, 1000);
+      return () => clearTimeout(timer); 
+    }
+  }, [success, navigate]);
 
   return (
     <div className='login-page'>
