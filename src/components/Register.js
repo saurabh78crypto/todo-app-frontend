@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Card, Container, Row, Col, Alert } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom'; 
 import api from '../api';
 import './Register.css'; 
 
@@ -9,6 +10,7 @@ const Register = () => {
   const [name, setName] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,8 +20,8 @@ const Register = () => {
       await api.post('/register', { email, password, name });
       setSuccess('Registration successful! Redirecting to login...');
       setTimeout(() => {
-        window.location.href = '/login'; 
-      }, 2000);
+        navigate('/login');
+      }, 1000);
     } catch (error) {
       setError(error.response?.data?.error || 'An unexpected error occurred.');
     }
