@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { FaCheckCircle } from 'react-icons/fa';
-import './HomePage.css'; // Custom styles
+import './HomePage.css';
 
 const HomePage = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Card, Container, Row, Col, Alert } from 'react-bootstrap';
 import api from '../api';
-import './Register.css'; // Import custom CSS for additional styling
+import './Register.css'; 
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -18,7 +18,7 @@ const Register = () => {
       await api.post('/register', { email, password, name });
       setSuccess('Registration successful! Redirecting to login...');
       setTimeout(() => {
-        window.location.href = '/login'; // Redirect to login page
+        window.location.href = '/login'; 
       }, 2000);
     } catch (error) {
       setError(error.response?.data?.error || 'An unexpected error occurred.');
