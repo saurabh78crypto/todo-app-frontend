@@ -1,0 +1,45 @@
+.text-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-container {
+  margin-top: 50px;
+}
+
+.register-card {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-card .card-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.register-card .form-control {
+  border-radius: 0.25rem;
+  border-color: #ced4da;
+}
+
+.register-card .btn-primary {
+  border-radius: 0.25rem;
+  margin-left: 70px;
+  padding: 0.75rem 1.25rem;
+}
+
+.register-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-card a:hover {
+  text-decoration: underline;
+}

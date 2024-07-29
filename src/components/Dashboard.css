@@ -1,0 +1,39 @@
+.dashboard-container {
+  padding: 20px;
+}
+
+.dashboard-card {
+  margin-bottom: 20px;
+}
+
+.todo-list-card,
+.pending-todo-card,
+.completed-todo-card {
+  margin-bottom: 20px;
+}
+
+.todo-list-card .card-body,
+.pending-todo-card .card-body,
+.completed-todo-card .card-body {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.todo-title.completed {
+  text-decoration: line-through;
+}
+
+.todo-title {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.todo-item {
+  margin-bottom: 10px;
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

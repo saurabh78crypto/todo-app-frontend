@@ -1,0 +1,15 @@
+.todo-title {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  
+  .todo-title.completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .todo-item {
+    margin-bottom: 10px;
+  }
+  
