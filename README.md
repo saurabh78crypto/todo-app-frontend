@@ -32,4 +32,4 @@ After starting the client server, you can access the application by navigating t
 
 ## Deployment
 
-The frontend is deployed on Netlify. You can access the live application at ``.
+The frontend is deployed on Netlify. You can access the live application at `https://66a7bbad18ab492d894cf61b--todo-web-main.netlify.app/login`.
