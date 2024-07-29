@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://todo-app-backend-a3nu.onrender.com'; 
+const API_BASE_URL = 'https://todo-app-backend-kbvd.onrender.com/api'; 
 
 const api = axios.create({
   baseURL: API_BASE_URL,
